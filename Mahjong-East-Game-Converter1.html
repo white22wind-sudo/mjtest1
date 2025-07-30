@@ -27,7 +27,7 @@
     여러 줄 붙여넣고 <strong>“변환하기”</strong> 누르면<br />
     모든 log를 병합한 하나의 패보가 나온다!
   </p>
-  <textarea id="inputArea" placeholder="https://tenhou.net/6/#json=... 을 한 줄씩 붙여넣기!"></textarea>
+  <textarea id="inputArea" placeholder="https://tenhou.net/6/#json=... 을 전부 붙여넣기!"></textarea>
   <br />
   <button onclick="convertUrls()">변환하기</button>
 
@@ -41,7 +41,7 @@
     function convertUrls() {
       const input = document.getElementById('inputArea').value.trim();
       if (!input) {
-        alert('URL을 입력해줘야지~');
+        alert('URL을 입력해주세요');
         return;
       }
 
@@ -103,7 +103,7 @@
       }
 
       navigator.clipboard.writeText(output).then(() => {
-        alert('변환 결과가 클립보드에 복사됐어~');
+        alert('변환 결과가 클립보드에 복사됐어요!');
       }).catch(() => {
         alert('복사 실패! 직접 드래그해서 복사해봐요.');
       });
